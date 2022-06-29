@@ -1,0 +1,15 @@
+C:\desenvolvimento.projetos\editordetexto\bin\Debug\net6.0\editordetexto.exe
+C:\desenvolvimento.projetos\editordetexto\bin\Debug\net6.0\editordetexto.deps.json
+C:\desenvolvimento.projetos\editordetexto\bin\Debug\net6.0\editordetexto.runtimeconfig.json
+C:\desenvolvimento.projetos\editordetexto\bin\Debug\net6.0\editordetexto.dll
+C:\desenvolvimento.projetos\editordetexto\bin\Debug\net6.0\editordetexto.pdb
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.csproj.AssemblyReference.cache
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.GeneratedMSBuildEditorConfig.editorconfig
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.AssemblyInfoInputs.cache
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.AssemblyInfo.cs
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.csproj.CoreCompileInputs.cache
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.dll
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\refint\editordetexto.dll
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.pdb
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\editordetexto.genruntimeconfig.cache
+C:\desenvolvimento.projetos\editordetexto\obj\Debug\net6.0\ref\editordetexto.dll
