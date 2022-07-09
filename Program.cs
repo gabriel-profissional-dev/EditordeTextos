@@ -39,11 +39,16 @@ namespace editordetexto
             Console.WriteLine("-----------------------");
             string text = "";//Vamos armazenar tudo que foi digitado pelo usuário aqui.
 
-            while(Console.ReadKey().Key != ConsoleKey.Escape) //Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
-            //registra tudo que for digitado por ele, e o laço não sai.
+            do //Aqui criamos o do para que o usuário digite tudo primeiro e depois seja digitado ESC para sair.
             {
-
+                text += Console.ReadLine();//Tudo que for digitado será concatenado à cadeia de caracteres, o texto. se fosse = seria substituido a cada texto digitado.
+                text += Environment.NewLine;//Comando que faz uma quebra de linha quando a leitura dos valores digitados é terminada.
             }
+            while(Console.ReadKey().Key != ConsoleKey.Escape);//Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
+            //registra tudo que for digitado por ele, e o laço não sai.
+
+            Console.Write(text);//Obs: ao executar, a primeira letra de cada linha é removida na execução, mas é arquivada no texto.
+            
 
         }
     }
