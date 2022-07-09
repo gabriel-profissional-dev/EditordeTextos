@@ -48,7 +48,7 @@ namespace editordetexto
             while(Console.ReadKey().Key != ConsoleKey.Escape);//Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
             //registra tudo que for digitado por ele, e o laço não sai.
 
-            Console.Write(text);//Obs: ao executar, a primeira letra de cada linha é removida na execução, mas é arquivada no texto.  
+            Salvar(text);  
         }
 
         static void Salvar(string text)
@@ -63,6 +63,10 @@ namespace editordetexto
             {
                 file.Write(text);
             }
+
+            Console.WriteLine($"Arquvo {path} salvo com sucesso!");
+            Console.ReadLine();
+            Menu();
         }
 
 
