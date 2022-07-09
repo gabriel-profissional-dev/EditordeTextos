@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;//usado para abrir e fechar o arquivo.
 
 namespace editordetexto
 {
@@ -47,10 +48,24 @@ namespace editordetexto
             while(Console.ReadKey().Key != ConsoleKey.Escape);//Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
             //registra tudo que for digitado por ele, e o laço não sai.
 
-            Console.Write(text);//Obs: ao executar, a primeira letra de cada linha é removida na execução, mas é arquivada no texto.
-            
-
+            Console.Write(text);//Obs: ao executar, a primeira letra de cada linha é removida na execução, mas é arquivada no texto.  
         }
+
+        static void Salvar(string text)
+        {
+            Console.Clear();
+            Console.WriteLine("Qual caminho para salvar o arquivo?");
+            var path = Console.ReadLine();//Aqui criamos uma variável que armazenará o arquivo segundo as preferências e endereço do cliente.
+
+            //As 4 linhas abaixo são a forma como escrevemos um texto em .Net.
+            using(var file = new StreamWriter(path))//Esse recurso using() abre, usa e fecha um arquivo automaticamente, usado até em banco de dados.
+            //o StreamWriter() representa um fluxo de bites, ou fluxo de escrita. Ele pede sempre o caminho do arquivo, que é o path.
+            {
+                file.Write(text);
+            }
+        }
+
+
     }
 }
 
