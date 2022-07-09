@@ -34,6 +34,16 @@ namespace editordetexto
 
         static void Editar()
         {
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
+            Console.WriteLine("-----------------------");
+            string text = "";//Vamos armazenar tudo que foi digitado pelo usuário aqui.
+
+            while(Console.ReadKey().Key != ConsoleKey.Escape) //Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
+            //registra tudo que for digitado por ele, e o laço não sai.
+            {
+
+            }
 
         }
     }
