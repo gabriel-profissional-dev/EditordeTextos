@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;//usado para abrir e fechar o arquivo.
+using System.IO;
 
 namespace editordetexto
 {
@@ -14,9 +14,9 @@ namespace editordetexto
         {
             Console.Clear();
             Console.WriteLine("O que você deseja fazer? ");
-            Console.WriteLine("1 - Abrir arquivo. ");
-            Console.WriteLine("2 - Criar novo arquivo. ");
-            Console.WriteLine("0 - Sair. ");
+            Console.WriteLine("1 - Abrir arquivo");
+            Console.WriteLine("2 - Criar novo arquivo");
+            Console.WriteLine("0 - Sair");
             short option = short.Parse(Console.ReadLine());
 
             switch(option)
@@ -34,9 +34,9 @@ namespace editordetexto
             Console.WriteLine("Qual caminho do arquivo?");
             string path = Console.ReadLine();
 
-            using(var file = new StreamReader(path))
+            using (var file = new StreamReader(path))
             {
-                string text = file.ReadToEnd();//Vai ler o arquivo até o final
+                string text = file.ReadToEnd();
                 Console.WriteLine(text);
             }
 
@@ -50,15 +50,14 @@ namespace editordetexto
             Console.Clear();
             Console.WriteLine("Digite seu texto abaixo (ESC para sair)");
             Console.WriteLine("-----------------------");
-            string text = "";//Vamos armazenar tudo que foi digitado pelo usuário aqui.
+            string text = "";
 
-            do //Aqui criamos o do para que o usuário digite tudo primeiro e depois seja digitado ESC para sair.
+            do 
             {
-                text += Console.ReadLine();//Tudo que for digitado será concatenado à cadeia de caracteres, o texto. se fosse = seria substituido a cada texto digitado.
-                text += Environment.NewLine;//Comando que faz uma quebra de linha quando a leitura dos valores digitados é terminada.
+                text += Console.ReadLine();
+                text += Environment.NewLine;
             }
-            while(Console.ReadKey().Key != ConsoleKey.Escape);//Laço de repetição criado para que, enquanto o usuário não digitar ESC, a tela
-            //registra tudo que for digitado por ele, e o laço não sai.
+            while(Console.ReadKey().Key != ConsoleKey.Escape);
 
             Salvar(text);  
         }
@@ -67,21 +66,18 @@ namespace editordetexto
         {
             Console.Clear();
             Console.WriteLine("Qual caminho para salvar o arquivo?");
-            var path = Console.ReadLine();//Aqui criamos uma variável que armazenará o arquivo segundo as preferências e endereço do cliente.
+            var path = Console.ReadLine();
 
-            //As 4 linhas abaixo são a forma como escrevemos um texto em .Net.
-            using(var file = new StreamWriter(path))//Esse recurso using() abre, usa e fecha um arquivo automaticamente, usado até em banco de dados.
-            //o StreamWriter() representa um fluxo de bites, ou fluxo de escrita. Ele pede sempre o caminho do arquivo, que é o path.
+
+            using (var file = new StreamWriter(path))
             {
                 file.Write(text);
             }
 
-            Console.WriteLine($"Arquvo {path} salvo com sucesso!");
+            Console.WriteLine($"Arquivo {path} salvo com sucesso!");
             Console.ReadLine();
             Menu();
         }
-
-
     }
 }
 
